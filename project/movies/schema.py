@@ -2,7 +2,7 @@ import graphene
 from graphene_django.types import ObjectType
 from .types import ActorType, MovieType
 from .models import Movie, Actor
-
+from .mutations import CreateActor
 
 # Create a Query type
 class Query(ObjectType):
@@ -34,4 +34,7 @@ class Query(ObjectType):
         return Movie.objects.all()
 
 
-schema = graphene.Schema(query=Query)
+class Mutation(graphene.ObjectType):
+    create_actor = CreateActor.Field()
+
+schema = graphene.Schema(query=Query,mutation=Mutation)
