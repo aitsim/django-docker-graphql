@@ -1,2 +1,12 @@
 Django>=2.0,<3.0
 psycopg2>=2.7,<3.0
+graphene>=2.0
+graphene-django>=2.2.0
+graphql-core==2.1
+graphql-relay>=0.4.5
+mock>=2.0.0
+pytest>=4.0.1
+pytest-django>=3.4.4
+celery>=4.2.1
+
+
